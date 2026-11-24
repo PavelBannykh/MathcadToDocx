@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xmcd2md"
+version = "0.2.0"
+description = "Mathcad 15 XMCD to Markdown or DOCX via Pandoc"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = []
+
+[project.scripts]
+xmcd2md = "xmcd2md.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+xmcd2md = ["*.lua"]
